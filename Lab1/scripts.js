@@ -3,8 +3,11 @@
  */
 "use strict";
 
-function switchDiv()
+
+
+function switchDiv(currentElement)
 {
+
 
 }
 

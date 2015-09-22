@@ -1,0 +1,24 @@
+.absoluteDiv {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+
+
+}
+
+hr {
+margin-top: 150px;
+}
+
+#ap1 {
+    background-color: darkgreen;
+    margin-left: 20px;
+    margin-top: 20px;
+
+
+}
+
+#ap2 {
+    background-color: lightcoral;
+
+}
