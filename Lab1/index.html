@@ -20,10 +20,38 @@
 
     <p>Step 2</p>
 
-    <h4></h4>
-    <h4></h4>
-    <h4></h4>
-    <h4></h4>
+
+    <div id="divOne" onclick="expandMenu('divOne')">
+        <h4 id="h1">Header 1</h4>
+        <p id="p1">Paragrah 1</p>
+    </div>
+
+    <div id="divTwo" onclick="expandMenu('divTwo')">
+        <h4 id="h2">Header 2</h4>
+        <p id="p2">paragraph 2</p>
+    </div>
+
+    <div id="divThree" onclick="expandMenu('divThree')">
+        <h4 id="h3">Header 3</h4>
+        <p id="p3">paragraph 3</p>
+    </div>
+
+    <div id="divFour" onclick="expandMenu('divFour')">
+        <h4 id="h4">Header 4</h4>
+        <p id="p4">paragraph 4</p>
+    </div>
+    <script>
+    var p1 = document.getElementById("p1");
+    var p2 = document.getElementById("p2");
+    var p3 = document.getElementById("p3");
+    var p4 = document.getElementById("p4");
+
+    p1.style.display = 'none';
+    p2.style.display = 'none';
+    p3.style.display = 'none';
+    p4.style.display = 'none';
+    </script>
+
 
     <hr/>
 
