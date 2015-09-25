@@ -11,7 +11,16 @@ function switchDiv(currentElement)
 
 }
 
-function expandHeader()
+function swap()
 {
-
-}
+    if(document.getElementById("ap1").style.zIndex<=document.getElementById("ap2").style.zIndex)
+    {
+        document.getElementById("ap1").style.zIndex = 1;
+        document.getElementById("ap2").style.zIndex = 0;
+    }
+    else
+    {
+        document.getElementById("ap2").style.zIndex = 1;
+        document.getElementById("ap1").style.zIndex = 0;
+    }
+}//end function
