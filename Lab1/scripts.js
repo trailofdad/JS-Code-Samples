@@ -77,3 +77,29 @@ function expandMenu(currentElement)
         h4.style.backgroundColor = 'pink';
     }
 }//end function
+
+var i = 0; var path = new Array();
+var text = new Array();
+
+// LIST OF IMAGES
+path[0] = "img/img1.jpg";
+path[1] = "img/img2.jpg";
+path[2] = "img/img3.jpg";
+
+text[0] = "These are some cool ships";
+text[1] = "I took these photos in the Navy";
+text[2] = "Turns out being in the Navy sucks";
+
+function swapImage()
+{
+    document.swap.src = path[i];
+    if(i < path.length - 1) i++;
+    else i = 0;
+
+    document.getElementById("text").innerHTML = text[i];
+    if(i < text.length - 1) i++;
+    else i = 0;
+    setTimeout("swapImage()",3000);
+}
+window.onload=swapImage;
+
