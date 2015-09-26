@@ -4,7 +4,7 @@
 "use strict";
 
 
-function swap()
+function swapDiv()
 {
     if(document.getElementById("ap1").style.zIndex<=document.getElementById("ap2").style.zIndex)
     {
@@ -12,7 +12,6 @@ function swap()
         document.getElementById("ap1").style.opacity = 100;
         document.getElementById("ap2").style.zIndex = 0;
         document.getElementById("ap2").style.opacity = 50;
-
     }
     else
     {
