@@ -3,7 +3,6 @@
  */
 "use strict";
 
-
 function swapDiv()
 {
     if(document.getElementById("ap1").style.zIndex<=document.getElementById("ap2").style.zIndex)

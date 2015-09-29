@@ -12,9 +12,9 @@
 
     <p>Step 1</p>
 
-    <div class="absoluteDiv" id="ap1" ondblclick="swapDiv()"></div>
+    <div class="absoluteDiv" id="ap1"></div>
 
-    <div class="absoluteDiv" id="ap2" ondblclick="swapDiv()"></div>
+    <div class="absoluteDiv" id="ap2"></div>
 
     <hr/>
 
@@ -63,4 +63,8 @@
     </div>
 
 </body>
+<script>
+    document.getElementById("ap1").addEventListener("dblclick", swapDiv);
+    document.getElementById("ap2").addEventListener("dblclick", swapDiv);
+</script>
 </html>
