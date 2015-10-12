@@ -20,20 +20,35 @@ document.getElementById("myButton").addEventListener("click",function(){
 
     var studentOne = new student(fName,lName,sId);
 
-    students.push(studentOne);
+    function check(){
+        for(var j = 0; j < students.length; j++)
+        {
+            if(students[i].sId = studentOne.sId)
+            {
+                alert("This student ID has already been used!")
+                return false
+            }
+        }
+        return true;
+    }
 
-    document.getElementById("target").innerHTML = "";
+
+    students.push(studentOne);
 
     for(var i = 0; i < students.length; i++)
     {
         var li = document.createElement("li"); //create list item
         var node = document.createTextNode(students[i].report());
         li.appendChild(node);
-        document.getElementById("studentInfo").appendChild(li);
+        document.getElementById("list").appendChild(li);
     }
 
 
 
-});
+
+
+
+
+});// end click function
 
 
