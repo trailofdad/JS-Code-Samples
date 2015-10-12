@@ -23,32 +23,35 @@ document.getElementById("myButton").addEventListener("click",function(){
     function check(){
         for(var j = 0; j < students.length; j++)
         {
-            if(students[i].sId = studentOne.sId)
+            if(students[j].sId == sId)
             {
                 alert("This student ID has already been used!")
-                return false
+                return false;
+                break;
             }
         }
         return true;
     }
 
+    var bool = check();
 
-    students.push(studentOne);
-
-    for(var i = 0; i < students.length; i++)
+    if (bool == true)
     {
+        students.push(studentOne);
         var li = document.createElement("li"); //create list item
-        var node = document.createTextNode(students[i].report());
+        var node = document.createTextNode(students[students.length - 1].report());
         li.appendChild(node);
         document.getElementById("list").appendChild(li);
+
     }
 
-
-
-
-
-
-
 });// end click function
+
+document.getElementById("trigger").addEventListener("hover",function(){
+    var json = document.getElementById("json");
+    json.style.visibility = "visibile";
+    json.style.zIndex = 2;
+    json.innerHTML = JSON.stringify(students);
+});
 
 
