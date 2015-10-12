@@ -29,8 +29,7 @@ document.getElementById("myButton").addEventListener("click",function(){
         var li = document.createElement("li"); //create list item
         var node = document.createTextNode(students[i].report());
         li.appendChild(node);
-        var studentInfo = document.getElementById("studentInfo");
-        studentInfo.appendChild(li);
+        document.getElementById("studentInfo").appendChild(li);
     }
 
 
