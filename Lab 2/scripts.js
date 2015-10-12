@@ -5,7 +5,7 @@ function student(first_name, last_name, student_id) {
     this.lName = last_name;
     this.sId = student_id;
     this.report = function(){
-        return this.fName + " " + this.lName + " " + this.sId + "<br />";
+        return this.fName + " " + this.lName + " " + this.sId;
     };
 }
 
@@ -26,9 +26,15 @@ document.getElementById("myButton").addEventListener("click",function(){
 
     for(var i = 0; i < students.length; i++)
     {
-        document.getElementById("target").innerHTML += students[i].report();
+        var li = document.createElement("li"); //create list item
+        var node = document.createTextNode(students[i].report());
+        li.appendChild(node);
+        var studentInfo = document.getElementById("studentInfo");
+        studentInfo.appendChild(li);
     }
 
 
 
 });
+
+
