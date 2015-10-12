@@ -47,11 +47,14 @@ document.getElementById("myButton").addEventListener("click",function(){
 
 });// end click function
 
-document.getElementById("trigger").addEventListener("hover",function(){
+document.getElementById("trigger").addEventListener("mouseover",function(){
     var json = document.getElementById("json");
-    json.style.visibility = "visibile";
-    json.style.zIndex = 2;
+    json.style.display = "block";
     json.innerHTML = JSON.stringify(students);
 });
 
+document.getElementById("json").addEventListener("click",function(){
+    var json = document.getElementById("json");
+    json.style.display = "none";
+});
 
