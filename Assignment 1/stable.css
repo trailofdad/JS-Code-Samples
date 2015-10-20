@@ -15,3 +15,24 @@
 
    height: 40px;
 }
+
+.subTable td {
+   font-size: 20px;
+   color: blue;
+   width: 40px;
+   height: 40px;
+   text-align: center;
+   vertical-align: middle;
+   border: 1px solid black;
+}
+
+.goldBox td {
+   background-image: url("gold.jpg");
+   background-position: 50% 50%;
+   z-index: -1;
+}
+.greenBox td {
+   background-image: url("green.jpg");
+   background-position: 50% 50%;
+   z-index: -1;
+}
