@@ -1,0 +1,17 @@
+.spuzzle, .subtable {
+   border-collapse: collapse;
+}
+
+.spuzzle td {
+   border: 5px outset gray;
+
+}
+
+.spuzzle th {
+   font-size: 8px;
+   color: gray;
+}
+.spuzzle tbody th {
+
+   height: 40px;
+}
