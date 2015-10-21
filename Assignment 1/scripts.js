@@ -9,13 +9,12 @@ document.getElementById("reset").addEventListener("click",function(){
 
 var edit = document.getElementsByClassName("edit");
 
-for (var i = 0; i < edit.length; i++ ) {
-    edit[i].addEventListener("keyup", function(){
-       if(isNaN(parseInt(edit[i].textContent)) == true)
-       {
-           alert('hey');
-       }
-    });
+edit.addEventListener("keyup", checkNum());
+
+function checkNum(edit)
+{
+    if(isNaN(edit.textContent))
+    {
+        alert('nan');
+    }
 }
-
-
