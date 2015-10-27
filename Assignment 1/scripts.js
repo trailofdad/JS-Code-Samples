@@ -60,7 +60,7 @@ function checkRow(element1, element2){
     var rowArray = [];
     //get td id
     var num = document.getElementById(element1);
-    //split id to get row#
+    //split id to get row letter
     var checkRows = num.className.split(' ')[0];
     //put the elements in a row array
     var rows = document.getElementsByClassName(checkRows);
