@@ -18,6 +18,9 @@ window.addEventListener("load", function() {
                 checkRow(this.id, this.textContent);
                 checkCol(this.id, this.textContent);
                 checkBox(this.id, this.textContent);
+                if(filled() == true){
+                    alert('Great Success!');
+                }
             }
             else{
                 alert("Please enter a valid number");
@@ -37,17 +40,38 @@ function numCheck(element){
     }
 }
 
+//full validation check
+//runs through each td to check for empty string or red color
+function filled(){
+    var td = document.getElementsByTagName("td");
+    var counter = 0;
+    for(var i = 0; i<td.length; i++){
+        if(td[i].textContent != "" && td[i].style.color != 'red'){
+            counter++;
+        }
+    }
+    if(counter == 90){
+        return true;
+    }
+}
+
 //Row Duplicate Check Function
 function checkRow(element1, element2){
     var rowArray = [];
+    //get td id
     var num = document.getElementById(element1);
+    //split id to get row#
     var checkRows = num.className.split(' ')[0];
+    //put the elements in a row array
     var rows = document.getElementsByClassName(checkRows);
+    //add each array to rowArray
     for(var i = 0; i < rows.length; i++){
         rowArray.push(rows[i].textContent);
     }
 
     var counter= 0;
+    //for each row element check against element2
+    //if the counter is 2, there is a duplicate
     for(i = 0; i < rowArray.length; i++){
         if(rowArray[i] == element2){
             counter++;
@@ -105,3 +129,4 @@ function checkBox(element1, element2){
         document.getElementById(element1).style.color = 'red';
     }
 }
+
