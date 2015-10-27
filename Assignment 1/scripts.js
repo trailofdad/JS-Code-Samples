@@ -9,8 +9,11 @@ document.getElementById("reset").addEventListener("click",function(){
     location.reload();
 });
 
+
+
 window.addEventListener("load", function() {
     var edit = document.getElementsByClassName("edit");
+
     for (var i = 0; i < edit.length; i++) {
         edit[i].addEventListener('keyup', function () {
             if(numCheck(this.textContent) != false){
@@ -129,3 +132,15 @@ function checkBox(element1, element2){
     }
 }
 
+document.getElementById("submit").addEventListener("click",function(){
+
+    var user = {
+        firstName:document.getElementById("fName").textContent,
+        lastName:document.getElementById("lName").textContent
+    };
+    document.getElementById("fname").style.visibility = "hidden";
+    document.getElementById("lname").style.visibility = "hidden";
+    document.getElementById("submit").style.visibility = "hidden";
+
+    document.getElementById("user").textContent = user.firstName + " " + user.lastName
+});
