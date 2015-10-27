@@ -70,8 +70,7 @@ function checkRow(element1, element2){
     }
 
     var counter= 0;
-    //for each row element check against element2
-    //if the counter is 2, there is a duplicate
+    //for each rowArray element check against element2
     for(i = 0; i < rowArray.length; i++){
         if(rowArray[i] == element2){
             counter++;
