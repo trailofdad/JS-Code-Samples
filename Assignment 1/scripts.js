@@ -47,7 +47,7 @@ function filled(){
     var counter = 0;
     for(var i = 0; i<td.length; i++){
         if(td[i].textContent != "" && td[i].style.color != 'red'){
-            counter++;
+            counter += 1;
         }
     }
     if(counter == 90){
@@ -73,7 +73,7 @@ function checkRow(element1, element2){
     //for each rowArray element check against element2
     for(i = 0; i < rowArray.length; i++){
         if(rowArray[i] == element2){
-            counter++;
+            counter += 1;
         }
     }
 
@@ -96,7 +96,7 @@ function checkCol(element1, element2){
     var counter= 0;
     for(i = 0; i < colArray.length; i++){
         if(colArray[i] == element2){
-            counter++;
+            counter += 1;
         }
     }
 
@@ -119,7 +119,7 @@ function checkBox(element1, element2){
     var counter= 0;
     for(i = 0; i < boxArray.length; i++){
         if(boxArray[i] == element2){
-            counter++;
+            counter += 1;
         }
     }
 
