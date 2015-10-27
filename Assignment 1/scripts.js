@@ -138,9 +138,9 @@ document.getElementById("submit").addEventListener("click",function(){
         firstName:document.getElementById("fName").textContent,
         lastName:document.getElementById("lName").textContent
     };
-    document.getElementById("fname").style.visibility = "hidden";
-    document.getElementById("lname").style.visibility = "hidden";
-    document.getElementById("submit").style.visibility = "hidden";
+    document.getElementById("fname").style.display = "none";
+    document.getElementById("lname").style.display = "none";
+    document.getElementById("submit").style.display = "none";
 
     document.getElementById("user").textContent = user.firstName + " " + user.lastName
 });
