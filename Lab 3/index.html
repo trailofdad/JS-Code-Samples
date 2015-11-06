@@ -3,7 +3,14 @@
   <head>
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-
+    <style>
+      .ng-invalid.ng-dirty{
+        border-color: #FA787E;
+      }
+      .ng-valid.ng-dirty{
+        border-color: #78FA89;
+      }
+    </style>
     <script type="text/javascript" src="products.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </head>
@@ -12,7 +19,7 @@
     <!--  Store Header  -->
     <header>
       <h1 class="text-center">Flatlander Crafted Gems</h1>
-      <h2 class="text-center">– an Angular store –</h2>
+      <h2 class="text-center">- an Angular store -</h2>
     </header>
 
     <!--  Products Container  -->
