@@ -4,25 +4,35 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
-</head>
-<body>
-<div id="json"></div>
-<form>
-    <label for="sId">Input student ID</label>
-    <input type="text" id="sId"/>
-    <label for="fName">Input first name</label>
-    <input type="text" id="fName"/>
-    <label for="lName">Input last name</label>
-    <input type="text" id="lName"/>
-    <input type="button" id="myButton" value="Create" />
-</form>
-<div id="trigger">
-    <ul id="list">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
 
+</head>
+<body ng-app="labFour">
+<div id="json"></div>
+
+<div id="trigger" ng-controller="studentController">
+
+    <form ng-submit="createStudent()">
+        <label for="sId">Student ID</label>
+        <input type="text" id="sId" ng-model="newID"/><br/>
+        <label for="fName">First Name</label>
+        <input type="text" id="fName" ng-model="newFname"/><br/>
+        <label for="lName" ng-model="newLname">Last Name</label>
+        <input type="text" id="lName"/>
+        <input type="submit" value="Create" class="btn-primary" />
+    </form>
+
+    <ul id="list">
+        <li ng-repeat="student in students">
+            {{student.text}}
+        </li>
     </ul>
+
+
 </div>
 </body>
 <footer>
-    <script language="javascript" type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 </footer>
 </html>
