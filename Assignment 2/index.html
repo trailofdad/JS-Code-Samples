@@ -11,22 +11,23 @@
 <body data-ng-controller="studentController">
 <form id="Form" name="Form" method="post" data-ng-submit="addNewStudent()">
     <p id = p1>
-        <label>First Name: <input type="text" id="firstName" data-ng-model="firstName"/></label>
+        <label>First Name: <input type="text" id="firstName" data-ng-model="firstName" class="text-primary"/></label>
     </p>
 
     <p>
-        <label>Last Name: <input type="text" id="lastName" data-ng-model="lastName"/></label>
+        <label>Last Name: <input type="text" id="lastName" data-ng-model="lastName" class="text-primary"/></label>
     </p>
 
     <p>
-        <label>Student Id: <input type="text"  id="studentId" data-ng-model="studentId"/> </label>
+        <label>Student Id: <input type="text"  id="studentId" data-ng-model="studentId" class="text-primary"/> </label>
     </p>
 
     <p>
-        <input type="submit" id="submit" value="Submit"/>
+        <input type="submit" id="submit" value="Submit" class="btn-primary"/>
     </p>
 </form>
 
+<h2>Total Students {{getNumStudents()}}</h2>
 
 <table class="table">
     <tr>

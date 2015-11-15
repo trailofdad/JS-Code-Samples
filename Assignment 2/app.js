@@ -41,7 +41,9 @@ angular.module('studentsApp',[])
             $scope.toShow = false;
         }
 
-
+        $scope.getNumStudents = function(){
+            return $scope.students.length;
+        }
     })
 
 ;
