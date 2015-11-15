@@ -34,10 +34,10 @@
         <th>Last Name</th>
         <th>Student ID</th>
     </tr>
-    <tr>
-        <td data-ng-mouseover="showDiv()" data-ng-mouseout="hideDiv()" data-ng-repeat="student in students">{{student.fName}}</td>
-        <td data-ng-mouseover="showDiv()" data-ng-mouseout="hideDiv()" data-ng-repeat="student in students">{{student.lName}}</td>
-        <td data-ng-mouseover="showDiv()" data-ng-mouseout="hideDiv()" data-ng-repeat="student in students">{{student.stuId}}</td>
+    <tr data-ng-mouseover="showDiv()" data-ng-mouseout="hideDiv()" ng-repeat="student in students">
+        <td>{{student.fName}}</td>
+        <td>{{student.lName}}</td>
+        <td>{{student.stuId}}</td>
     </tr>
 </table>
 

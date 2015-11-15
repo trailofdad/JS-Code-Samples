@@ -1,5 +1,5 @@
-{"students":[
-  {"firstName":"John", "lastName":"Doe", "studentId":"00001"},
-  {"firstName":"Anna", "lastName":"Smith", "studentId":"00002"},
-  {"firstName":"Peter", "lastName":"Jones", "studentId":"00003"}
-]}
+[
+  {"fName":"John", "lName":"Doe", "stuId":"00001"},
+  {"fName":"Anna", "lName":"Smith", "stuId":"00002"},
+  {"fName":"Peter", "lName":"Jones", "stuId":"00003"}
+]
