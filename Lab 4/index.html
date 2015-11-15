@@ -1,38 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ng-app="studentsApp">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
-    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
-    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="app.js" type="text/javascript"></script>
+    <title>Students App</title>
 </head>
-<body ng-app="labFour">
-<div id="json"></div>
+<body data-ng-controller="studentController">
+<form id="Form" name="Form" method="post" data-ng-submit="addNewStudent()">
+    <p id = p1>
+        <label>First Name: <input type="text" id="firstName" data-ng-model="firstName"/></label>
+    </p>
 
-<div id="trigger" ng-controller="studentController">
+    <p>
+        <label>Last Name: <input type="text" id="lastName" data-ng-model="lastName"/></label>
+    </p>
 
-    <form ng-submit="createStudent()">
-        <label for="sId">Student ID</label>
-        <input type="text" id="sId" ng-model="newID"/><br/>
-        <label for="fName">First Name</label>
-        <input type="text" id="fName" ng-model="newFname"/><br/>
-        <label for="lName" ng-model="newLname">Last Name</label>
-        <input type="text" id="lName"/>
-        <input type="submit" value="Create" class="btn-primary" />
-    </form>
+    <p>
+        <label>Student Id: <input type="text"  id="studentId" data-ng-model="studentId"/> </label>
+    </p>
 
-    <ul id="list">
-        <li ng-repeat="student in students">
-            {{student.text}}
-        </li>
-    </ul>
+    <p>
+        <input type="submit" id="submit" value="Submit"/>
+    </p>
+</form>
 
+
+<ul>
+    <li data-ng-mouseover="showDiv()" data-ng-mouseout="hideDiv()" data-ng-repeat="student in students">{{student.fName}}&nbsp{{student.lName}}&nbsp{{student.stuId}} </li>
+</ul>
+
+<div id="newDiv" data-ng-show="toShow">
+
+    <p>{{students}}</p>
 
 </div>
+
+
 </body>
-<footer>
-    <script type="text/javascript" src="app.js"></script>
-</footer>
+
 </html>
