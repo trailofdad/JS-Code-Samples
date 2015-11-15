@@ -1,7 +1,11 @@
 angular.module('studentsApp',[])
-    .controller('studentController',function($scope){
+    .controller('studentController',function($scope, $http){
 
         $scope.students = []; // end of students array
+
+        $http.get('students.json').success(function (data){
+            $scope.students = data;
+        });
 
         $scope.newStudent = function(){
 
